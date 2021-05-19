@@ -43,16 +43,16 @@ app.post("/api/sendmail", (req, res) => {
 
 const sendMail = (user, callback) => {
     const mailOptions = {
-        from: `"youemail@gmail.com"`,
+        from: `"youremail@gmail.com"`,
         to: user.toMail,
         cc: user.ccMail,
         subject: user.subject,
         html: user.html
     };
-    if (user.resume !== null && user.resume !== undefined) {
+    if (user.file !== null && user.file !== undefined) {
         mailOptions.attachments = [{
             filename: user.fileName,
-            path: user.resume
+            path: user.file
         }]
     }
     const transporter = nodemailer.createTransport({
