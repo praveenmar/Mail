@@ -43,7 +43,7 @@ app.post("/api/sendmail", (req, res) => {
 
 const sendMail = (user, callback) => {
     const mailOptions = {
-        from: `"youremail@gmail.com"`,
+        from: `"pravinmaroju217@gmail.com"`,
         to: user.toMail,
         cc: user.ccMail,
         subject: user.subject,
@@ -60,8 +60,8 @@ const sendMail = (user, callback) => {
         port: 587,
         secure: false,
         auth: {
-            user: "youremail@gmail.com",
-            pass: "***********"
+            user: "pravinmaroju217@gmail.com",
+            pass: "lscpeustwybteumb"
         }
     });
 
